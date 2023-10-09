@@ -29,10 +29,10 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop Layout](../screenshots/desktopLayout.png)
-![Mobile Layout](../screenshots/mobileLayout.png)
-![Mobile Layout](../screenshots/mobileLayout2.png)
-![Mobile Nav](../screenshots/mobileNav.png)
+![Desktop Layout](./screenshots/desktopLayout.png)
+![Mobile Layout](./screenshots/mobileLayout.png)
+![Mobile Layout](./screenshots/mobileLayout2.png)
+![Mobile Nav](./screenshots/mobileNav.png)
 
 ### Links
 
