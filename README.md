@@ -124,5 +124,5 @@ While I was at this challenge, I learnt to create a simple ripple effect for but
 
 ## Author
 
-- Frontend Mentor - [@Tzienom](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@Tzienom](https://www.twitter.com/Tzienom)
+- Frontend Mentor - [Tzienom](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [Tzienom](https://www.twitter.com/Tzienom)
