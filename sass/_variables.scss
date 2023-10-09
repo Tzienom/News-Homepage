@@ -1,0 +1,28 @@
+$font-weights: (
+    "regular": 400,
+    "bold": 700,
+    "extra_bold": 800
+);
+
+$colors: (
+    "Soft_orange": hsl(35, 77%, 62%),
+    "Soft_red": hsl(5, 85%, 63%),
+    "Off_white": hsl(36, 100%, 99%),
+    "Grayish_blue": hsl(233, 8%, 79%),
+    "Dark_grayish_blue": hsl(236, 13%, 42%),
+    "Very_dark_blue": hsl(240, 100%, 5%),
+);
+
+$desktop__view: 1100px;
+$tablet__view: 700px;
+$mobile__sm: 699px;
+$mobile__xs: 280px;
+$mobile__xxs: 160px;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}

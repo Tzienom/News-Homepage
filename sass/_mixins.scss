@@ -1,0 +1,29 @@
+@mixin displayLayout($type, $justify-content, $align-items) {
+    display: $type;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin desktop {
+    @media (min-width: $desktop__view) {
+        @content;
+    }
+}
+
+@mixin mobile_xs {
+    @media (max-width: $mobile__xs) {
+        @content;
+    }
+}
+
+@mixin mobile_xxs {
+    @media (max-width: $mobile__xxs) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet__view) {
+        @content;
+    }
+}

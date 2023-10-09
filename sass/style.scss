@@ -1,0 +1,217 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+
+#web3_desktop {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+#web3_mobile {
+    @include desktop {
+        display: none;
+    }
+}
+
+#navbar.container {
+    padding: 2rem 1.5rem;
+
+    @include desktop {
+        padding: 2rem 0;
+    }
+}
+
+#navbar {
+    @include displayLayout(flex, space-between, center);
+
+
+
+    .icons {
+        position: relative;
+        width: 40px;
+        height: 31px;
+        @include displayLayout(flex, center, center);
+
+        .icon_img {
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        #menu_open { height: 17px; }
+
+    }
+
+    #nav_list {
+        position: fixed;
+        top: 0;
+        right: -20px;
+        background: color('Off_white');
+        width: 0;
+        height: 100%;
+        padding: 6.25em 0 0 1.25em;
+        z-index: 1;
+
+        .nav_item + .nav_item {
+            margin-top: 1rem;
+
+            @include desktop {
+                margin: 0 0 0 2.5rem;
+            }
+        }
+
+        // Style rules for #nav_list
+        @include desktop {
+            position: relative;
+            right: 0;
+            width: auto;
+            padding: 0;
+
+            @include displayLayout(flex, flex-end, center);
+        }
+
+        // Style rules for #navbar
+        @include desktop {
+            margin: 3rem 0 1.7rem 0;
+        }
+    }
+
+} /* End of navbar */
+
+#main {
+
+    #main_heading {
+        font: weight('extra_bold') 2.7rem 'Inter';
+        margin: 1rem 0;
+        line-height: 1;
+
+        @include desktop {
+            /* 
+            This is to remove the margin top & bottom 
+            set for the mobile and tablet view which causes 
+            extra spacing when grid-gap is used for bigger screens 
+            */
+            margin: 0;
+
+            font-size: 3.5rem;
+
+        }
+    }
+
+    #main_p {
+        margin-bottom: 2rem;
+    }
+
+    .link_btn {
+        background: color('Soft_red');
+        text-transform: uppercase;
+        font-weight: weight('bold');
+        letter-spacing: 4px;
+        padding: .8em 2em;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        &:hover { background: color('Very_dark_blue'); }
+
+    }
+
+    #sidebar {
+        background: color('Very_dark_blue');
+        margin: 4rem 0;
+        padding: 1.5em;
+
+        @include desktop { margin: 0; } /* Removes the extra spacing gotten from the smaller screen size when on larger screens */
+
+        .secondary_title_h2 {
+            font: weight('bold') 2rem 'Inter';
+        }
+
+        .sub_col {
+            margin: 2rem 0;
+
+            .secondary_title_h3 {
+                font: weight('bold') 1.2rem 'Inter';
+                margin-bottom: .5rem;
+            }
+        }
+
+        .sub_col:nth-last-child(1) { margin-bottom: 0; }
+
+        .horizontal_line { border-bottom: 1px solid color('Dark_grayish_blue'); }
+    } /* End of sidebar */
+
+    @include desktop {
+        .display_grid {
+            @include displayLayout(grid, center, start);
+            grid-template-columns: repeat(3, 1fr);
+            // grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+                "main_img main_img sidebar"
+                "main_heading main_p sidebar";
+
+            grid-gap: 2em;
+            margin-bottom: 4rem; /* This is to increase the spacing between the main content and the footer */
+
+            .main_img {
+                grid-area: main_img;
+            }
+            
+            #sidebar {
+                grid-area: sidebar;
+            }
+
+            #main_heading {
+                grid-area: main_heading;
+                margin-right: .3em;
+            }
+
+            .main_p {
+                grid-area: main_p;
+            }
+        }
+    }
+
+
+} /* End of main */
+
+footer {
+
+    .display_grid .col {
+        margin-bottom: 2rem;
+
+        @include desktop { margin-bottom: 0; }
+
+        @include displayLayout(grid, start, center);
+        grid-template-columns: 100px 1fr;
+        gap: 1em;
+
+        @include mobile_xs { grid-template-columns: 1fr; }
+
+        .img_container { width: 100px; }
+        .footer_img { width: 100%; }
+
+        .secondary_title_h4 { font: weight('bold') 2rem 'Inter'; }
+
+        .secondary_title_h5 {
+            font: weight('extra_bold') 1.1rem 'Inter';
+            margin: .5rem 0;
+        }
+    }
+
+    .display_grid {
+        @include desktop {
+            @include displayLayout(grid, space-between, center);
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1em;
+        }
+    }
+
+} /* End of footer */

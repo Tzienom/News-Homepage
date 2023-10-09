@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font: 400 0.9375rem "Inter";
+  line-height: 1.6; }
+
+.container {
+  padding: 0 1.5rem; }
+  @media (min-width: 700px) {
+    .container {
+      max-width: 700px;
+      margin: 0 auto; } }
+  @media (min-width: 1100px) {
+    .container {
+      padding: 0;
+      width: 80%;
+      max-width: 1440px; } }
+
+.link_btn:after {
+  content: "";
+  display: block;
+  background: white;
+  position: absolute;
+  padding: 300% 0 0 350%;
+  margin: -120% 0 0 -50px;
+  opacity: 0;
+  transition: all .8s; }
+
+.link_btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: .8s; }
+
+a {
+  text-decoration: none;
+  transition: .5s; }
+
+ul li {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: 100%; }
+
+.off_white {
+  color: #fffdfa; }
+
+.very_dark_blue {
+  color: #00001a; }
+
+.dark_grayish_blue {
+  color: #5d5f79; }
+
+.grayish_blue {
+  color: #c5c6ce; }
+
+.soft_orange {
+  color: #e9ab53; }
+
+.grayish_blue {
+  color: #c5c6ce; }
+
+.hov_soft_red:hover {
+  color: #f15e50; }
+
+.hov_soft_orange:hover {
+  color: #e9ab53; }
+
+.attribution {
+  margin: 3rem 0 .7rem; }
+  .attribution .attribution_p, .attribution .attribution_p .attribution_link {
+    font-size: 0.6875rem;
+    text-align: left;
+    color: #5d5f79;
+    font-weight: bold; }
+    .attribution .attribution_p .attribution_link {
+      color: #00001a; }
+      .attribution .attribution_p .attribution_link:hover {
+        color: #f15e50; }
+
+#footer .attribution.container {
+  margin: 3rem auto .7rem; }
+
+@media (max-width: 160px) {
+  html {
+    font-size: 9px; }
+
+  .img_container {
+    max-width: 70px; }
+
+  #logo {
+    width: 30px; } }
+#web3_desktop {
+  display: none; }
+  @media (min-width: 1100px) {
+    #web3_desktop {
+      display: block; } }
+
+@media (min-width: 1100px) {
+  #web3_mobile {
+    display: none; } }
+
+#navbar.container {
+  padding: 2rem 1.5rem; }
+  @media (min-width: 1100px) {
+    #navbar.container {
+      padding: 2rem 0; } }
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #navbar .icons {
+    position: relative;
+    width: 40px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #navbar .icons .icon_img {
+      position: absolute;
+      width: 100%;
+      z-index: 2; }
+      @media (min-width: 1100px) {
+        #navbar .icons .icon_img {
+          display: none; } }
+    #navbar .icons #menu_open {
+      height: 17px; }
+  #navbar #nav_list {
+    position: fixed;
+    top: 0;
+    right: -20px;
+    background: #fffdfa;
+    width: 0;
+    height: 100%;
+    padding: 6.25em 0 0 1.25em;
+    z-index: 1; }
+    #navbar #nav_list .nav_item + .nav_item {
+      margin-top: 1rem; }
+      @media (min-width: 1100px) {
+        #navbar #nav_list .nav_item + .nav_item {
+          margin: 0 0 0 2.5rem; } }
+    @media (min-width: 1100px) {
+      #navbar #nav_list {
+        position: relative;
+        right: 0;
+        width: auto;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; } }
+    @media (min-width: 1100px) {
+      #navbar #nav_list {
+        margin: 3rem 0 1.7rem 0; } }
+
+/* End of navbar */
+#main {
+  /* End of sidebar */ }
+  #main #main_heading {
+    font: 800 2.7rem "Inter";
+    margin: 1rem 0;
+    line-height: 1; }
+    @media (min-width: 1100px) {
+      #main #main_heading {
+        /* 
+        This is to remove the margin top & bottom 
+        set for the mobile and tablet view which causes 
+        extra spacing when grid-gap is used for bigger screens 
+        */
+        margin: 0;
+        font-size: 3.5rem; } }
+  #main #main_p {
+    margin-bottom: 2rem; }
+  #main .link_btn {
+    background: #f15e50;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: .8em 2em;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; }
+    #main .link_btn:hover {
+      background: #00001a; }
+    #main .link_btn:after {
+      position: absolute;
+      content: "";
+      background: #e9ab53;
+      color: #00001a;
+      transform: scale(0);
+      transition: all .8s ease;
+      opacity: 0; }
+    #main .link_btn:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transform: scale(2);
+      transition: 0s; }
+  #main #sidebar {
+    background: #00001a;
+    margin: 4rem 0;
+    padding: 1.5em;
+    /* Removes the extra spacing gotten from the smaller screen size when on larger screens */ }
+    @media (min-width: 1100px) {
+      #main #sidebar {
+        margin: 0; } }
+    #main #sidebar .secondary_title_h2 {
+      font: 700 2rem "Inter"; }
+    #main #sidebar .sub_col {
+      margin: 2rem 0; }
+      #main #sidebar .sub_col .secondary_title_h3 {
+        font: 700 1.2rem "Inter";
+        margin-bottom: .5rem; }
+    #main #sidebar .sub_col:nth-last-child(1) {
+      margin-bottom: 0; }
+    #main #sidebar .horizontal_line {
+      border-bottom: 1px solid #5d5f79; }
+  @media (min-width: 1100px) {
+    #main .display_grid {
+      display: grid;
+      justify-content: center;
+      align-items: start;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "main_img main_img sidebar" "main_heading main_p sidebar";
+      grid-gap: 2em;
+      margin-bottom: 4rem;
+      /* This is to increase the spacing between the main content and the footer */ }
+      #main .display_grid .main_img {
+        grid-area: main_img; }
+      #main .display_grid #sidebar {
+        grid-area: sidebar; }
+      #main .display_grid #main_heading {
+        grid-area: main_heading;
+        margin-right: .3em; }
+      #main .display_grid .main_p {
+        grid-area: main_p; } }
+
+/* End of main */
+footer .display_grid .col {
+  margin-bottom: 2rem;
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-template-columns: 100px 1fr;
+  gap: 1em; }
+  @media (min-width: 1100px) {
+    footer .display_grid .col {
+      margin-bottom: 0; } }
+  @media (max-width: 280px) {
+    footer .display_grid .col {
+      grid-template-columns: 1fr; } }
+  footer .display_grid .col .img_container {
+    width: 100px; }
+  footer .display_grid .col .footer_img {
+    width: 100%; }
+  footer .display_grid .col .secondary_title_h4 {
+    font: 700 2rem "Inter"; }
+  footer .display_grid .col .secondary_title_h5 {
+    font: 800 1.1rem "Inter";
+    margin: .5rem 0; }
+@media (min-width: 1100px) {
+  footer .display_grid {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em; } }
+
+/* End of footer */
+
+/*# sourceMappingURL=style.css.map */
